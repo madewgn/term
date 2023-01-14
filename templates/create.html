@@ -1,0 +1,26 @@
+{% block content %}
+    <h1>{% block title %} Add a New Message {% endblock %}</h1>
+    <form method="post">
+        <label for="title">Title</label>
+        <br>
+        <input type="text" name="title"
+               placeholder="title"
+               value="{{ request.form['title'] }}"></input>
+        <br>
+
+        <label for="content">Message Content</label>
+        <br>
+        <input type="text" name="url"
+               placeholder="Asciinema url"
+               value="{{ request.form['url'] }}"></input>        <br>
+        <label for="content">Desk Content</label>
+        <br>
+        <textarea name="desk"
+                  placeholder="content"
+                  rows="15"
+                  cols="60"
+                  >{{ request.form['desk'] }}</textarea>
+        <br>
+        <button type="submit">Submit</button>
+    </form>
+{% endblock %}

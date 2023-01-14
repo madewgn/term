@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title></title>
+    <meta charset="UTF-8">
+<!--     <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+<!--          <link rel="stylesheet" type="text/css" href="https://www.tonylykke.com/css/asciinema-glyphs.css"> -->
+<!-- 		<link rel="stylesheet" href="https://www.tonylykke.com/css/font-awesome.min.css"> -->
+	
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/asciinema-player.css') }}" />
+		<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}" />
+	
+  </head>
+  <body>
+    <h1 style="text-align: center">{{ title }}</h1>
+<p class="terminal-glyphs">
+    <asciinema-player
+        src="{{ link }}" 
+    ></asciinema-player>
+</p>
+<p>{{ desk }}</p>
+<!-- <p class="terminal-glyphs"> -->
+<!--     <asciinema-player -->
+<!--         src="{{ url_for('static', filename='static/hi.cast') }}"></asciinema-player> -->
+<!-- </p> -->
+
+
+    <script src="{{ url_for('static', filename='js/asciinema-player.js') }}"></script>
+  </body>
+</html>
